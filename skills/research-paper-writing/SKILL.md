@@ -41,7 +41,7 @@ Prioritize first-impression quality (figures/tables/layout), logical flow, and e
 ## Tables And Generated Figures
 
 1. In main result tables, use `#FFC7CE` for best values and `#D9E7F4` for second-best values when highlighting is requested.
-2. For generated plots, match the established paper style: main titles use 25pt bold; subtitles, if present, use 22pt bold; axis labels use 20pt; tick labels use `tick_params` at 15pt; legends use 15pt; axes use `set_facecolor('#f5f5f5')`; borders/spines use linewidth 2; y-axis grids use `ax1.yaxis.grid(True, linestyle='--', linewidth=0.5, zorder=0)` when applicable; layouts use `plt.tight_layout(rect=[0,0,0.99,1])`.
+2. For generated plots, match the established paper style: main titles, if present, use 25pt bold; subtitles, if present, use 22pt bold; axis labels use 20pt; tick labels use `tick_params` at 15pt; legends use 15pt; axes use `set_facecolor('#f5f5f5')`; borders/spines use linewidth 2; y-axis grids use `ax1.yaxis.grid(True, linestyle='--', linewidth=0.5, zorder=0)` when applicable; layouts use `plt.tight_layout(rect=[0,0,0.99,1])`.
 3. For bar charts, draw bar borders. For polar plots, keep `ax1.spines['polar'].set_visible(True)` and `ax1.spines['polar'].set_linewidth(2)`. For multi-axis figures, apply spine and tick styling consistently, e.g. `for spine in axs[0].spines.values(): spine.set_linewidth(2)` and `axs[0].tick_params(axis='both', labelsize=11)` when matching an existing figure family.
 
 ## Paragraph Clarity Check (Important)
