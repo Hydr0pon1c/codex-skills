@@ -29,6 +29,7 @@ Prioritize first-impression quality (figures/tables/layout), logical flow, and e
 7. Use a clean teaser and pipeline figure.
 8. Use readable, minimal-ink tables.
 9. Keep formatting consistent and tidy.
+10. Avoid long, unbroken paragraphs or dense text blocks. When a section or subsection grows long, use concise `\paragraph{...}` headings to group related content where useful.
 
 ## Terminology And Wording Consistency
 
@@ -36,13 +37,16 @@ Prioritize first-impression quality (figures/tables/layout), logical flow, and e
 2. Use one stable term for each concept. Avoid alternating between near-synonyms unless they denote different technical objects.
 3. Avoid defensive phrasing by default. State evidence-aligned claims directly, and add limitations only when scientifically necessary.
 4. Define recurring technical phrases at first use with a short, concrete explanation.
-5. Preserve original titles in citations and bibliography entries.
+5. Spell out each abbreviation at first use as `full term (ABBR)`, separately in the abstract and main text if used in both.
+6. Avoid semicolons unless needed for clarity.
+7. Preserve original titles in citations and bibliography entries.
 
 ## Tables And Generated Figures
 
-1. In main result tables, use `#FFC7CE` for best values and `#D9E7F4` for second-best values when highlighting is requested.
-2. For generated plots, match the established paper style: main titles, if present, use 25pt bold; subtitles, if present, use 22pt bold; axis labels use 20pt; tick labels use `tick_params` at 15pt; legends use 15pt; axes use `set_facecolor('#f5f5f5')`; borders/spines use linewidth 2; y-axis grids use `ax1.yaxis.grid(True, linestyle='--', linewidth=0.5, zorder=0)` when applicable; layouts use `plt.tight_layout(rect=[0,0,0.99,1])`.
-3. For bar charts, draw bar borders. For polar plots, keep `ax1.spines['polar'].set_visible(True)` and `ax1.spines['polar'].set_linewidth(2)`. For multi-axis figures, apply spine and tick styling consistently, e.g. `for spine in axs[0].spines.values(): spine.set_linewidth(2)` and `axs[0].tick_params(axis='both', labelsize=11)` when matching an existing figure family.
+1. Balance page text density by adjusting figure and table placement when useful, while keeping each close to the relevant discussion and preserving reading order.
+2. In main result tables, use `#FFC7CE` for best values and `#D9E7F4` for second-best values when highlighting is requested.
+3. For generated plots, match the established paper style: main titles, if present, use 25pt bold; subtitles, if present, use 22pt bold; axis labels use 20pt; tick labels use `tick_params` at 15pt; legends use 15pt; axes use `set_facecolor('#f5f5f5')`; borders/spines use linewidth 2; y-axis grids use `ax1.yaxis.grid(True, linestyle='--', linewidth=0.5, zorder=0)` when applicable; layouts use `plt.tight_layout(rect=[0,0,0.99,1])`.
+4. For bar charts, draw bar borders. For polar plots, keep `ax1.spines['polar'].set_visible(True)` and `ax1.spines['polar'].set_linewidth(2)`. For multi-axis figures, apply spine and tick styling consistently, e.g. `for spine in axs[0].spines.values(): spine.set_linewidth(2)` and `axs[0].tick_params(axis='both', labelsize=11)` when matching an existing figure family.
 
 ## Paragraph Clarity Check (Important)
 
